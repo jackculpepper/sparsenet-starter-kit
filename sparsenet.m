@@ -41,7 +41,7 @@ for t = 1:num_trials
 
             %% note this could be sped up by running on the entire batch.
             %% however, for large batches you may then need to increase the
-            %% number of line searches to get a consistent solution.
+            %% number of l-bfgs-b iterations to get a consistent solution.
 
             %% running separately is slower, but consistent.
 
@@ -162,7 +162,7 @@ for t = 1:num_trials
             [sucess,msg,msgid] = mkdir(sprintf('state/%s', paramstr));
  
             imwrite(array_frame, ...
-                sprintf('state/%s/bf_up=%06d.png',paramstr,update), 'png');
+                sprintf('state/%s/phi_up=%06d.png',paramstr,update), 'png');
             eval(sprintf('save state/%s/phi.mat phi',paramstr));
 
             saveparamscmd = sprintf('save state/%s/params.mat', paramstr);
