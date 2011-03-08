@@ -1,0 +1,31 @@
+
+Sparsenet starter kit!
+Author: Jack Culpepper
+License: BSD
+
+checkgrad.m was written by Carl Rasmussen
+sfigure.m was written by Daniel Eaton
+
+Assumes:
+
+IMAGES.mat is in ../data/IMAGES.mat
+lbfgsb-stewart is in ../lbfgsb-stewart
+
+To get started:
+- Run unittest in matlab.
+- Use ~jack/bin/gqview to look in the state dir.
+
+To run positive only coefficients:
+- Comment out this line in unittest.m:
+        nb  = zeros(1,M); % bound type (none)
+
+For a new dataset:
+- Add a case to the switch statement.
+
+For a new optimization procedure:
+- Add a case to the switch statement.
+
+For a new model:
+- Write a check and objfun for a new inference objfun.
+- Write a check and objfun for a new learning objfun.
+
